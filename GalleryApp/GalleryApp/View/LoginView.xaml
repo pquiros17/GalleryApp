@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gradient="clr-namespace:gradient"
+             x:Class="GaleryApp.View.LoginView">
+
+    <!--<AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All">
+            <gradient:GradientColorStack StarColor="#0064a4" EndColor="#002536">
+
+            </gradient:GradientColorStack>
+        </StackLayout>
+    </AbsoluteLayout>-->
+
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,0.4"
+                     AbsoluteLayout.LayoutFlags="All">
+            <gradient:GradientColorStack StarColor="#0064a4" 
+                                         EndColor="#002536">
+                <AbsoluteLayout Padding="20">
+                    <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.2,0.6,0.6"
+                                 AbsoluteLayout.LayoutFlags="All">
+                        <Image 
+                           Source="Gallery.png"
+                           HeightRequest="150"
+                           WidthRequest="150"/>
+                        <Label Text="GALLERY App" 
+                               TextColor="White"
+                               Font="Bold"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start"/>
+                    </StackLayout>
+                </AbsoluteLayout>
+            </gradient:GradientColorStack>
+        </StackLayout>
+        <StackLayout Padding="50" 
+                     AbsoluteLayout.LayoutBounds="1,1,1,0.64"
+                     AbsoluteLayout.LayoutFlags="All">
+
+            <!--<Frame HasShadow="false" 
+                       CornerRadius="25"
+                       Padding="0"
+                       BackgroundColor="#efefef">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    --><!--Facebook Login--><!--
+                    <StackLayout Grid.Column="0" Grid.Row="0"
+                                     Orientation="Horizontal"
+                                     Padding="5"
+                                     Margin="10,0,0,0">
+                        <Image Source="FacebookLogo.png"/>
+                        <Label Text="Facebook" 
+                                   FontSize="Small"
+                                   VerticalOptions="Center"
+                                   TextColor="#9b9b9b"/>
+                    </StackLayout>
+                    <BoxView Grid.Column="1" Grid.Row="0"
+                                 WidthRequest="1" 
+                                 HeightRequest="50"
+                                 BackgroundColor="#9b9b9b"/>
+                    --><!--Google Login--><!--
+                    <StackLayout Grid.Column="2" Grid.Row="0"
+                                     Orientation="Horizontal"
+                                     Padding="5">
+                        <Image Source="GoogleLogo.png"/>
+                        <Label Text="Google" 
+                                   FontSize="Small"
+                                   VerticalOptions="Center"
+                                   TextColor="#9b9b9b"/>
+                    </StackLayout>
+
+                </Grid>
+            </Frame>-->
+
+
+            <!-- Contenido-->
+            <StackLayout Padding="50,0"
+                     Spacing="20">
+                <Entry Placeholder="Usuario"
+                       PlaceholderColor="#9b9b9b"
+                       TextColor="#9b9b9b" 
+                       HeightRequest="45"
+                       Text="{Binding User}"
+                       BackgroundColor="Transparent"/>
+                <!--Password Texbox-->
+                <Entry Placeholder="Contrasena" 
+                       PlaceholderColor="#9b9b9b" 
+                       IsPassword="true"
+                       TextColor="#9b9b9b"
+                       HeightRequest="45"
+                       Text="{Binding Password}"
+                       BackgroundColor="Transparent"/>
+                <!--Login Button-->
+                <Button Text="INICIAR SESION" 
+                        TextColor="#FFF" 
+                        HeightRequest="45"
+                        BackgroundColor="#008abb" 
+                        CornerRadius="20"
+                        Command="{Binding LoginCommand}"/>
+            </StackLayout>
+            <StackLayout  HeightRequest="320" BackgroundColor="White" >
+                <Label TextColor="Black" HorizontalTextAlignment="Center" Text="Pedro Quiros C."></Label>
+                <Label TextColor="Black" HorizontalTextAlignment="Center" Text="GALLERYAPP"></Label>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+
+    <!--<StackLayout>
+        <StackLayout  HeightRequest="150" BackgroundColor="DarkBlue" >
+            <Image WidthRequest="100" HeightRequest="100" Source="Gallery.png"></Image>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Usuario"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="txtUsuario" 
+                   Placeholder="Usuario"
+                   Text="{Binding User}"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Contraseña"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtContraseña" 
+                    Text="{Binding Password}"
+                   Placeholder="Contraseña"
+                   IsPassword="True"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Ingresar"
+                    Command="{Binding LoginCommand}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout  HeightRequest="320" BackgroundColor="DarkBlue" >
+            <Label TextColor="White" HorizontalTextAlignment="Center" Text="Pedro Quiros C."></Label>
+            <Label TextColor="White" HorizontalTextAlignment="Center" Text="GALLERYAPP"></Label>
+        </StackLayout>
+    </StackLayout>-->
+</ContentPage>

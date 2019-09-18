@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:GalleryApp.View"
+             mc:Ignorable="d"
+             x:Class="GalleryApp.View.IngresoView"
+             Title="Page1">
+    <ContentPage.Content>
+        <StackLayout Padding="50,0"
+                     Spacing="20">
+            <!--<Label Text="{Binding infoDispositivo.Modelo}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+            <Label Text="Nombre"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Nombre"
+                       PlaceholderColor="#9b9b9b"
+                       TextColor="#9b9b9b" 
+                       HeightRequest="45"
+                       Text="{Binding Nombre}"
+                       BackgroundColor="Transparent"/>
+            <Label Text="Usuario"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Usuario"
+                       PlaceholderColor="#9b9b9b"
+                       TextColor="#9b9b9b" 
+                       HeightRequest="45"
+                       Text="{Binding Usuario}"
+                       BackgroundColor="Transparent"/>
+            
+            <Label Text="Contraseña" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            
+            <Entry Placeholder="Contrasena" 
+                       PlaceholderColor="#9b9b9b" 
+                       IsPassword="true"
+                       TextColor="#9b9b9b"
+                       HeightRequest="45"
+                       Text="{Binding Contrasena}"
+                       BackgroundColor="Transparent"/>
+            
+            <Button Text="REGISTRAR" 
+                        TextColor="#FFF" 
+                        HeightRequest="45"
+                        BackgroundColor="#008abb" 
+                        CornerRadius="20"
+                        Command="{Binding IngresoCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

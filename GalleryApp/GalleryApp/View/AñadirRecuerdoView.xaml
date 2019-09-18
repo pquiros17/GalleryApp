@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="GalleryApp.View.AñadirRecuerdoView" x:Name="RecuerdoView">
+    <StackLayout>
+            <!--DESCRIPCION-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Descripcion del Recuerdo:"
+                       HorizontalOptions="Start"/>
+            <Entry Text="{Binding CurrentRecuerdo.DescripcionRecuerdo}"
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            
+            <!--fOTO-->
+            <StackLayout Orientation="Horizontal">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+
+
+            <Image x:Name="PhotoImage" WidthRequest="100" HeightRequest="100" Source="{Binding Source={x:Reference RecuerdoView},Path=BindingContext.Foto, Mode=OneWayToSource}"/>
+            <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1"
+                    Clicked="CameraButton_Clicked"/>
+        </StackLayout>
+        <Button Text="Agregar Recuerdo"
+                Command="{Binding AddNewPersonCommand}"/>
+    </StackLayout>
+</ContentPage>
